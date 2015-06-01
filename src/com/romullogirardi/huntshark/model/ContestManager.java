@@ -49,18 +49,18 @@ public class ContestManager {
 			numbersFrequency.add(new NumberFrequency(index, 0));
 		}
 
-		//Initializing gameStrategies with CombinationsGenerator
-		gameStrategies = new Vector<>();
-		Integer[] elements = new Integer[N];
-		for(int index = 1; index <= N; index++) elements[index - 1] = index; 
-		CombinationsGenerator myCombinationsGenerator = new CombinationsGenerator(elements, K) {
-			
-			@Override
-			public void processCombination(Object[] elements, int[] combination) {
-				gameStrategies.add(new GameStrategy(combination));
-			}
-		};
-		myCombinationsGenerator.generateCombinations();
+//		//Initializing gameStrategies with CombinationsGenerator
+//		gameStrategies = new Vector<>();
+//		Integer[] elements = new Integer[N];
+//		for(int index = 1; index <= N; index++) elements[index - 1] = index; 
+//		CombinationsGenerator myCombinationsGenerator = new CombinationsGenerator(elements, K) {
+//			
+//			@Override
+//			public void processCombination(Object[] elements, int[] combination) {
+//				gameStrategies.add(new GameStrategy(combination));
+//			}
+//		};
+//		myCombinationsGenerator.generateCombinations();
 	}
 	
 	//GETTERS AND SETTERS
@@ -294,10 +294,10 @@ public class ContestManager {
 	public void print() {
 		
 		if(production) {
-			System.out.println("\nTodos os concursos:\n");
-			for(int index = 0; index < contests.size() - 1; index++) {
-				System.out.println(contests.get(index).toString());
-			}
+//			System.out.println("\nTodos os concursos:\n");
+//			for(int index = 0; index < contests.size() - 1; index++) {
+//				System.out.println(contests.get(index).toString());
+//			}
 		
 			System.out.println("\nJogo anterior: ");
 			if((contests.size() - 2) >= 0) {
