@@ -49,7 +49,7 @@ public class HTMLParser{
 
 	//ATTRIBUTES
 	private static Document htmlFile;
-	private static boolean isHtmlEnough = false;
+	private static boolean isHtmlEnough = true;
 	
 	//METHODS
 	private static void parseHtmlFile() {
@@ -220,6 +220,6 @@ public class HTMLParser{
 	
 	private static void readAdditionalContests() {
 		int[] numbers1 = {1, 2, 3, 7, 10, 12, 14, 15, 17, 18, 20, 21, 22, 23, 24};
-		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 01), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, true), true);
+		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 01), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, false), true);
 	}
 }
