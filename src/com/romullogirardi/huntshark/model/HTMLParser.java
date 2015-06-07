@@ -49,7 +49,7 @@ public class HTMLParser{
 
 	//ATTRIBUTES
 	private static Document htmlFile;
-	private static boolean isHtmlEnough = true;
+	private static boolean isHtmlEnough = false;
 	
 	//METHODS
 	private static void parseHtmlFile() {
@@ -220,6 +220,10 @@ public class HTMLParser{
 	
 	private static void readAdditionalContests() {
 		int[] numbers1 = {1, 2, 3, 7, 10, 12, 14, 15, 17, 18, 20, 21, 22, 23, 24};
-		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 01), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, false), true);
+		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 01), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, false), false);
+		int[] numbers2 = {1, 3, 6, 7, 8, 9, 10, 11, 12, 13, 17, 19, 20, 24, 25};
+		ContestManager.getInstance().computeLastContest(new Contest(1217, new GregorianCalendar(2015, 5, 03), "PIQUEROBI/SP", numbers2, (float) 1984077.81, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), true);
+		int[] numbers3 = {1 , 2, 3, 4, 5, 7, 9, 10, 11, 13, 14, 18, 20, 21, 23};
+		ContestManager.getInstance().computeLastContest(new Contest(1218, new GregorianCalendar(2015, 5, 05), "OSASCO/SP", numbers3, (float) 1052205.73, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), true);
 	}
 }

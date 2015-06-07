@@ -24,23 +24,22 @@ public class Main {
 //		System.out.println();
 
 		//Computing best results to combinations considering a part of past contests
-		int increment = 10;
+//		int increment = 10;
 //		for(int index = 10; index <= 1000; index += increment) {
-		for(int index = 800; index <= 1000; index += increment) {
-			if(index >= 100) {
-				increment = 100;
-			}
-			System.out.println("Computando combinações considerando os " + index + " concursos passados...");
-			bestGameStrategies = new ArrayList<>();
-			ContestManager.newInstance();
-			ContestManager.getInstance().setState(State.PART);
-			ContestManager.getInstance().setContestsPartition(index);
-			ContestManager.getInstance().populateContests();
-			System.out.println("RANKING DAS COMBINAÇÕES DIRETAS CONSIDERANDO OS " + index + " CONCURSOS PASSADOS:");
-			for(GameStrategy gameStrategy : bestGameStrategies) 
-				System.out.println(gameStrategy.toString());
-			System.out.println();
-		}
+//			if(index >= 100) {
+//				increment = 100;
+//			}
+//			System.out.println("Computando combinações considerando os " + index + " concursos passados...");
+//			bestGameStrategies = new ArrayList<>();
+//			ContestManager.newInstance();
+//			ContestManager.getInstance().setState(State.PART);
+//			ContestManager.getInstance().setContestsPartition(index);
+//			ContestManager.getInstance().populateContests();
+//			System.out.println("RANKING DAS COMBINAÇÕES DIRETAS CONSIDERANDO OS " + index + " CONCURSOS PASSADOS:");
+//			for(GameStrategy gameStrategy : bestGameStrategies) 
+//				System.out.println(gameStrategy.toString());
+//			System.out.println();
+//		}
 
 		//Executing iterations in intervals to discover the best 10 gameStrategies
 //		int interval = 10000;
@@ -64,21 +63,21 @@ public class Main {
 //			}
 //		} while (index <= numberOfIterations);
 		
-//		//Executing a specific group of gameStrategies in production
-//		int[] indexes1 = {2, 3, 4, 5, 7, 10, 12, 13, 16, 17, 18, 19, 21, 23, 24};
-//		int[] indexes2 = {2, 5, 6, 7, 8, 9, 10, 14, 15, 16, 18, 19, 20, 21, 23};
-//		int[] indexes3 = {0, 2, 3, 4, 7, 11, 12, 13, 14, 16, 17, 18, 20, 21, 22};
-//		int[] indexes4 = {0, 3, 5, 6, 8, 11, 12, 13, 14, 16, 17, 18, 20, 21, 23} ;
-//		Vector<GameStrategy> gameStrategies = new Vector<GameStrategy>();
-//		gameStrategies.add(new GameStrategy(indexes1));
-//		gameStrategies.add(new GameStrategy(indexes2));
-//		gameStrategies.add(new GameStrategy(indexes3));
-//		gameStrategies.add(new GameStrategy(indexes4));
-//		ContestManager.getInstance().setGameStrategies(gameStrategies);
-//		ContestManager.getInstance().setState(State.PART);
-//		ContestManager.getInstance().setContestsPartition(30);
-//		ContestManager.getInstance().setProduction(true);
-//		ContestManager.getInstance().populateContests();
+		//Executing a specific group of gameStrategies in production
+		int[] indexes1 = {2, 3, 4, 5, 7, 10, 12, 13, 16, 17, 18, 19, 21, 23, 24};
+		int[] indexes2 = {2, 5, 6, 7, 8, 9, 10, 14, 15, 16, 18, 19, 20, 21, 23};
+		int[] indexes3 = {0, 2, 3, 4, 7, 11, 12, 13, 14, 16, 17, 18, 20, 21, 22};
+		int[] indexes4 = {0, 3, 5, 6, 8, 11, 12, 13, 14, 16, 17, 18, 20, 21, 23} ;
+		Vector<GameStrategy> gameStrategies = new Vector<GameStrategy>();
+		gameStrategies.add(new GameStrategy(indexes1));
+		gameStrategies.add(new GameStrategy(indexes2));
+		gameStrategies.add(new GameStrategy(indexes3));
+		gameStrategies.add(new GameStrategy(indexes4));
+		ContestManager.getInstance().setGameStrategies(gameStrategies);
+		ContestManager.getInstance().setState(State.PART);
+		ContestManager.getInstance().setContestsPartition(30);
+		ContestManager.getInstance().setProduction(true);
+		ContestManager.getInstance().populateContests();
 	}
 	
 	public static void addToBestGameStrategies(ArrayList<GameStrategy> gameStrategies) {
