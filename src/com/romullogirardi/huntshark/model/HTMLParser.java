@@ -226,6 +226,8 @@ public class HTMLParser{
 		int[] numbers3 = {1 , 2, 3, 4, 5, 7, 9, 10, 11, 13, 14, 18, 20, 21, 23};
 		ContestManager.getInstance().computeLastContest(new Contest(1218, new GregorianCalendar(2015, 5, 5), "OSASCO/SP", numbers3, (float) 1052205.73, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), false);
 		int[] numbers4 = {2, 3, 4, 5, 6, 8, 9, 10, 14, 16, 19, 20, 22, 23, 25};
-		ContestManager.getInstance().computeLastContest(new Contest(1219, new GregorianCalendar(2015, 5, 8), "OSASCO/SP", numbers4, (float) 1000000, (float) 2584.10 , (float) 20, (float) 8, (float) 4, true), true);
+		ContestManager.getInstance().computeLastContest(new Contest(1219, new GregorianCalendar(2015, 5, 8), "OSASCO/SP", numbers4, (float) 1000000, (float) 2584.10 , (float) 20, (float) 8, (float) 4, false), false);
+		int[] numbers5 = {2, 3, 4, 5, 6, 7, 9, 13, 14, 17, 18, 19, 20, 23, 25};
+		ContestManager.getInstance().computeLastContest(new Contest(1220, new GregorianCalendar(2015, 5, 10), "ITABAIANA/SE", numbers5, (float) 1026828.47, (float) 1371.62  , (float) 20, (float) 8, (float) 4, true), true);
 	}
 }
