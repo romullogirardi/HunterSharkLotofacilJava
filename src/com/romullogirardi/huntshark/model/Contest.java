@@ -17,7 +17,7 @@ public class Contest {
 	private float reward13points;
 	private float reward12points;
 	private float reward11points;
-	private ArrayList<Game> recommendedGames = new ArrayList<>();
+	private ArrayList<Game> recommendedGames = new ArrayList<Game>();
 	private float recommendedInvestment = 0;
 	private float recommendedReward = 0;
 	private boolean bet = false;

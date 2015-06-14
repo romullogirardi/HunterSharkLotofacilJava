@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
 
-import com.romullogirardi.huntshark.model.ContestManager.State;
-
 public class Main {
 	
 	//Collection which stores the 10 best GameStrategies
@@ -74,7 +72,6 @@ public class Main {
 		gameStrategies.add(new GameStrategy(indexes3));
 		gameStrategies.add(new GameStrategy(indexes4));
 		ContestManager.getInstance().setGameStrategies(gameStrategies);
-		ContestManager.getInstance().setState(State.PART);
 		ContestManager.getInstance().setContestsPartition(30);
 		ContestManager.getInstance().setProduction(true);
 		ContestManager.getInstance().populateContests();
@@ -83,7 +80,7 @@ public class Main {
 	public static void addToBestGameStrategies(ArrayList<GameStrategy> gameStrategies) {
 		bestGameStrategies.addAll(gameStrategies);
 		Collections.sort(bestGameStrategies);
-		ArrayList<GameStrategy> temp = new ArrayList<>();
+		ArrayList<GameStrategy> temp = new ArrayList<GameStrategy>();
 		for(int index = 0; index < 10; index++) {
 			temp.add(bestGameStrategies.get(index));
 		}

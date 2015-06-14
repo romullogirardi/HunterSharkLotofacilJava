@@ -13,18 +13,12 @@ public class ContestManager {
 	public static final int K = 15;
 
 	//ATTRIBUTES
-	private Vector<Contest> contests = new Vector<>();
+	private Vector<Contest> contests = new Vector<Contest>();
 	private Vector<NumberFrequency> numbersFrequency;
 	private Vector<GameStrategy> gameStrategies;
 	private CombinationsGenerator combinationsGenerator;
 	private int contestsPartition = -1;
 	private boolean production = false;
-	
-	//ENUM
-	public enum State {
-		ALL, PART;
-	}
-	private State state = State.ALL;
 	
 	//IMPLEMENTING AS A SINGLETON
 	private static ContestManager instance = null;
@@ -44,7 +38,7 @@ public class ContestManager {
 	public ContestManager() {
 		
 		//Initializing numbersFrequency with 0 from 0 to 99
-		numbersFrequency = new Vector<>();
+		numbersFrequency = new Vector<NumberFrequency>();
 		for(int index = 1; index <= 25; index++) {
 			numbersFrequency.add(new NumberFrequency(index, 0));
 		}
@@ -72,10 +66,6 @@ public class ContestManager {
 		this.contestsPartition = contestsPartition;
 	}
 
-	public void setState(State state) {
-		this.state = state;
-	}
-
 	public void setGameStrategies(Vector<GameStrategy> gameStrategies) {
 		this.gameStrategies = gameStrategies;
 	}
@@ -88,7 +78,7 @@ public class ContestManager {
 	public void initializeGameStrategiesByCombinationsGenerator(int lowestIndex, int highestIndex) {
 
 		//Initializing gameStrategies with CombinationsGenerator
-		gameStrategies = new Vector<>();
+		gameStrategies = new Vector<GameStrategy>();
 		Integer[] elements = new Integer[N];
 		for(int index = 1; index <= N; index++) elements[index - 1] = index; 
 		combinationsGenerator = new CombinationsGenerator(elements, K) {
@@ -206,7 +196,7 @@ public class ContestManager {
 	private void updateControllers(Contest lastContestResult) {
 
 		//Updating numbersFrequency and getting selected indexes
-		ArrayList<Integer> indexes = new ArrayList<>();
+		ArrayList<Integer> indexes = new ArrayList<Integer>();
 		for(int number : lastContestResult.getNumbers()) {
 			for(NumberFrequency numberFrequency : numbersFrequency) {
 				if(numberFrequency.getNumber() == number) {
@@ -274,12 +264,12 @@ public class ContestManager {
 	
 	private void setNextContestRecommendedGames() {
 		
-		ArrayList<Game> recommendedGames = new ArrayList<>();
+		ArrayList<Game> recommendedGames = new ArrayList<Game>();
 		
 		//Setting recommendedGames
 		ArrayList<ArrayList<Integer>> recommendedIndexes = getRecommendedIndexes(Constants.GAMES_QUANTITY);
 		for(ArrayList<Integer> indexes : recommendedIndexes) {
-			ArrayList<Integer> numbers = new ArrayList<>();
+			ArrayList<Integer> numbers = new ArrayList<Integer>();
 			for(Integer index : indexes) {
 				numbers.add(numbersFrequency.get(index).getNumber());
 			}
@@ -355,7 +345,7 @@ public class ContestManager {
 	
 	private ArrayList<ArrayList<Integer>> getRecommendedIndexes(int gamesQuantity) {
 		
-		ArrayList<ArrayList<Integer>> indexes = new ArrayList<>();
+		ArrayList<ArrayList<Integer>> indexes = new ArrayList<ArrayList<Integer>>();
 
 		for(int index = 0; index < gamesQuantity; index++) {
 			indexes.add(gameStrategies.get(index).getIndexes());
@@ -366,7 +356,7 @@ public class ContestManager {
 	
 	private ArrayList<GameStrategy> getRecommendedStrategies(int gamesQuantity) {
 		
-		ArrayList<GameStrategy> gameStrategiesSelected = new ArrayList<>();
+		ArrayList<GameStrategy> gameStrategiesSelected = new ArrayList<GameStrategy>();
 		
 		for(int index = 0; index < gamesQuantity; index++) {
 			gameStrategiesSelected.add(gameStrategies.get(index));

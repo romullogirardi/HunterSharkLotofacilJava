@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Game {
 
 	//ATTRIBUTES
-	private ArrayList<Integer> numbers = new ArrayList<>();
+	private ArrayList<Integer> numbers = new ArrayList<Integer>();
 	private int points = -1;
 	private float investment = Constants.GAME_PRIZE;
 	private float reward = 0;
