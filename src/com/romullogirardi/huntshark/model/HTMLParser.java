@@ -220,16 +220,18 @@ public class HTMLParser{
 	
 	private static void readAdditionalContests() {
 		int[] numbers1 = {1, 2, 3, 7, 10, 12, 14, 15, 17, 18, 20, 21, 22, 23, 24};
-		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 1), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, false), false);
+		ContestManager.getInstance().computeLastContest(new Contest(1216, new GregorianCalendar(2015, 5, 1), "OSASCO/SP", numbers1, (float) 775596.57, (float) 1435.45, (float) 20, (float) 8, (float) 4, false), true);
 		int[] numbers2 = {1, 3, 6, 7, 8, 9, 10, 11, 12, 13, 17, 19, 20, 24, 25};
-		ContestManager.getInstance().computeLastContest(new Contest(1217, new GregorianCalendar(2015, 5, 3), "PIQUEROBI/SP", numbers2, (float) 1984077.81, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), false);
+		ContestManager.getInstance().computeLastContest(new Contest(1217, new GregorianCalendar(2015, 5, 3), "PIQUEROBI/SP", numbers2, (float) 1984077.81, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), true);
 		int[] numbers3 = {1 , 2, 3, 4, 5, 7, 9, 10, 11, 13, 14, 18, 20, 21, 23};
-		ContestManager.getInstance().computeLastContest(new Contest(1218, new GregorianCalendar(2015, 5, 5), "OSASCO/SP", numbers3, (float) 1052205.73, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), false);
+		ContestManager.getInstance().computeLastContest(new Contest(1218, new GregorianCalendar(2015, 5, 5), "OSASCO/SP", numbers3, (float) 1052205.73, (float) 2394.06, (float) 20, (float) 8, (float) 4, true), true);
 		int[] numbers4 = {2, 3, 4, 5, 6, 8, 9, 10, 14, 16, 19, 20, 22, 23, 25};
-		ContestManager.getInstance().computeLastContest(new Contest(1219, new GregorianCalendar(2015, 5, 8), "OSASCO/SP", numbers4, (float) 1000000, (float) 2584.10 , (float) 20, (float) 8, (float) 4, false), false);
+		ContestManager.getInstance().computeLastContest(new Contest(1219, new GregorianCalendar(2015, 5, 8), "OSASCO/SP", numbers4, (float) 1000000, (float) 2584.10 , (float) 20, (float) 8, (float) 4, false), true);
 		int[] numbers5 = {2, 3, 4, 5, 6, 7, 9, 13, 14, 17, 18, 19, 20, 23, 25};
-		ContestManager.getInstance().computeLastContest(new Contest(1220, new GregorianCalendar(2015, 5, 10), "ITABAIANA/SE", numbers5, (float) 1026828.47, (float) 1371.62  , (float) 20, (float) 8, (float) 4, true), false);
+		ContestManager.getInstance().computeLastContest(new Contest(1220, new GregorianCalendar(2015, 5, 10), "ITABAIANA/SE", numbers5, (float) 1026828.47, (float) 1371.62  , (float) 20, (float) 8, (float) 4, true), true);
 		int[] numbers6 = {2, 3, 4, 6, 9, 10, 12, 14, 15, 18, 19, 21, 22, 23, 24};
 		ContestManager.getInstance().computeLastContest(new Contest(1221, new GregorianCalendar(2015, 5, 12), "OSASCO/SP", numbers6, (float) 896752.87, (float) 1395.31  , (float) 20, (float) 8, (float) 4, true), true);
+		int[] numbers7 = {1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 15, 17, 20, 22, 24};
+		ContestManager.getInstance().computeLastContest(new Contest(1222, new GregorianCalendar(2015, 5, 15), "OSASCO/SP", numbers7, (float) 290026.29, (float) 1218.77  , (float) 20, (float) 8, (float) 4, false), true);
 	}
 }

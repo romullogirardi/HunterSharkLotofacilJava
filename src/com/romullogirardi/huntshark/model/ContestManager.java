@@ -284,10 +284,10 @@ public class ContestManager {
 	public void print() {
 		
 		if(production) {
-//			System.out.println("\nTodos os concursos:\n");
-//			for(int index = 0; index < contests.size() - 1; index++) {
-//				System.out.println(contests.get(index).toString());
-//			}
+			System.out.println("\nTodos os concursos:\n");
+			for(int index = 1185; index < contests.size() - 1; index++) {
+				System.out.println(contests.get(index).toString());
+			}
 		
 			System.out.println("\nJogo anterior: ");
 			if((contests.size() - 2) >= 0) {
