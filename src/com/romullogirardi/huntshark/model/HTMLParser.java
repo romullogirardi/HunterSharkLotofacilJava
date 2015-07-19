@@ -49,7 +49,7 @@ public class HTMLParser{
 
 	//ATTRIBUTES
 	private static Document htmlFile;
-	private static boolean isHtmlEnough = false;
+	private static boolean isHtmlEnough = true;
 	
 	//METHODS
 	private static void parseHtmlFile() {
@@ -257,7 +257,7 @@ public class HTMLParser{
 //		ContestManager.getInstance().computeLastContest(new Contest(1232, new GregorianCalendar(2015, 6, 8), "IPAMERI/GO", numbers17, (float) 1730536.94, (float) 1390.63  , (float) 20, (float) 8, (float) 4, true), true);
 //		int[] numbers18 = {1, 4, 5, 9, 10, 13, 14, 15, 16, 17, 18, 19, 22, 23, 25};
 //		ContestManager.getInstance().computeLastContest(new Contest(1233, new GregorianCalendar(2015, 6, 10), "IPAMERI/GO", numbers18, (float) 668188.71, (float) 1835.68  , (float) 20, (float) 8, (float) 4, true), true);
-		int[] numbers1 = {1, 2, 3, 4, 6, 9, 10, 11, 12, 13, 15, 17, 18, 20, 24};
-		ContestManager.getInstance().computeLastContest(new Contest(1235, new GregorianCalendar(2015, 6, 15), "SÃO JOSÉ DOS PINHAIS/PR", numbers1, (float) 1592534.98, (float) 1827.71  , (float) 20, (float) 8, (float) 4, true), true);
+//		int[] numbers1 = {1, 2, 3, 4, 6, 9, 10, 11, 12, 13, 15, 17, 18, 20, 24};
+//		ContestManager.getInstance().computeLastContest(new Contest(1235, new GregorianCalendar(2015, 6, 15), "SÃO JOSÉ DOS PINHAIS/PR", numbers1, (float) 1592534.98, (float) 1827.71  , (float) 20, (float) 8, (float) 4, true), true);
 	}
 }
